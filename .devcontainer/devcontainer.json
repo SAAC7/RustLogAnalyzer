@@ -1,0 +1,31 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/rust
+{
+	"name": "Rust",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/rust:2-1-trixie",
+	// Extensiones que se instalarán SOLO dentro del contenedor (no ensucian tu VS Code local)
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"rust-lang.rust-analyzer",
+				"vadimcn.vscode-lldb",
+				"tamasfe.even-better-toml"
+			],
+			"settings": {
+				"editor.formatOnSave": true,
+				"rust-analyzer.checkOnSave.command": "clippy"
+			}
+		}
+	},
+	// Mantiene el usuario por defecto del contenedor ('vscode')
+	"remoteUser": "vscode",
+	// Opcional: Persistir el caché de cargo para no re-descargar crates en cada rebuild
+	"mounts": [
+    {
+      "source": "rust-cargo-cache-${devcontainerId}",
+      "target": "/usr/local/cargo",
+      "type": "volume"
+    }
+  ]
+}

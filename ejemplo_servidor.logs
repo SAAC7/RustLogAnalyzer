@@ -1,0 +1,12 @@
+2024-05-12 10:00:01 INFO Servidor iniciado en el puerto 8080
+2024-05-12 10:00:05 DEBUG Cargando configuracion desde config.toml
+2024-05-12 10:01:12 WARN Uso de memoria al 85%
+2024-05-12 10:02:30 ERROR No se pudo conectar a la base de datos
+2024-05-12 10:02:31 INFO Reintentando conexion (1/3)
+2024-05-12 10:02:35 ERROR Tiempo de espera agotado
+2024-05-12 10:03:00 INFO Conexion restablecida
+2024-05-12 10:05:42 WARN Certificado SSL expira en 7 dias
+
+2024-05-12 10:07:10 ERROR Fallo al escribir en /var/data/cache
+linea corrupta sin formato
+2024-05-12 10:09:00 INFO Servidor detenido
