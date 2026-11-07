@@ -44,7 +44,7 @@ fn main() {
     let path = match get_path_from_args(&args) {
         Some(p) => p,
         None => {
-            eprintln!("Use: cargo run -- <file_path>");
+            eprintln!("Usage: cargo run -- <file_path>");
             process::exit(1);
         }
     };

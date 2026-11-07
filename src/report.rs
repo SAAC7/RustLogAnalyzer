@@ -118,12 +118,12 @@ pub fn print_critical(entries: &[LogEntry]) {
         .filter(|e| matches!(e.level, LogLevel::Error | LogLevel::Warn))
         .collect();
     if critical.is_empty() {
-        println!(" (any, ¡all right!)");
+        println!(" (none, all good!)");
         return;
     }
     for entry in critical {
         println!(
-            "  [línea {:>3}] {:<5} {}",
+            "  [line {:>3}] {:<5} {}",
             entry.line_number, entry.level, entry.message
         );
     }
